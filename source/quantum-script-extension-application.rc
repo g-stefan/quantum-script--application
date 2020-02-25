@@ -1,0 +1,16 @@
+//
+// Quantum Script Extension Application
+//
+// Copyright (c) 2020 Grigore Stefan <g_stefan@yahoo.com>
+// Created by Grigore Stefan <g_stefan@yahoo.com>
+//
+// MIT License (MIT) <http://opensource.org/licenses/MIT>
+//
+
+#include "xyo-application-version--os-windows-rc.hpp"
+#include "quantum-script-extension-application-version.hpp"
+#include "quantum-script-extension-application-copyright.hpp"
+
+XYO_APPLICATION_VERSION_INFO(QUANTUM_SCRIPT_EXTENSION_APPLICATION,"qse-application.dll","Quantum Script Extension Application")
+
+
