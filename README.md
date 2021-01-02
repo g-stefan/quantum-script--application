@@ -1,10 +1,12 @@
 # Quantum Script Extension Application
 
-Application;\
-Application.getCmdN();\
-Application.getCmdS(index);\
-Application.getExecutable();\
+```javascript
+Application;
+Application.getCmdN();
+Application.getCmdS(index);
+Application.getExecutable();
 Application.getPathExecutable();
+```
 
 ## License
 
