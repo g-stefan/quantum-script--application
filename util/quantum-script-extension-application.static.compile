@@ -1,6 +1,0 @@
---lib qse-application
---project-base=quantum-script-extension-application
---source-is-separate
---use-project=quantum-script.static
---install-dev
---install-inc=quantum-script-extension

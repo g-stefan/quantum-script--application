@@ -1,0 +1,8 @@
+--dll qse-application
+--project-base=quantum-script-extension-application
+--build-include
+--dll-no-version
+--use-project=quantum-script
+--install-dev
+--install-inc=quantum-script-extension
+--no-version
