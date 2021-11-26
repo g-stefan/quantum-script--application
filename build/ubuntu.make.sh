@@ -8,7 +8,7 @@ if [ "$ACTION" = "" ]; then
 	ACTION=make
 fi
 
-echo "-> $ACTION quantum-script-extension-application"
+echo "- $BUILD_PROJECT > $ACTION"
 
 cmdX(){
 	if ! "$@" ; then
@@ -20,3 +20,4 @@ cmdX(){
 cmdX file-to-cs --touch=source/quantum-script-extension-application.cpp --file-in=source/quantum-script-extension-application.js --file-out=source/quantum-script-extension-application.src --is-string --name=extensionApplicationSource
 cmdX xyo-cc --mode=$ACTION @build/source/quantum-script-extension-application.static.compile
 cmdX xyo-cc --mode=$ACTION @build/source/quantum-script-extension-application.dynamic.compile
+
