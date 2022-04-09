@@ -14,7 +14,7 @@
 #include "quantum-script-extension-application-license.hpp"
 #include "quantum-script-extension-application.hpp"
 #ifndef QUANTUM_SCRIPT_EXTENSION_APPLICATION_NO_VERSION
-#include "quantum-script-extension-application-version.hpp"
+#	include "quantum-script-extension-application-version.hpp"
 #endif
 
 #include "quantum-script-variablenumber.hpp"
@@ -38,8 +38,7 @@ namespace Quantum {
 #endif
 
 					return VariableNumber::newVariable(
-							((Executive *)(function->valueSuper))->mainCmdN
-						);
+					    ((Executive *)(function->valueSuper))->mainCmdN);
 				};
 
 				static TPointer<Variable> getCmdS(VariableFunction *function, Variable *this_, VariableArray *arguments) {
@@ -48,8 +47,7 @@ namespace Quantum {
 #endif
 
 					return VariableString::newVariable(
-							(((Executive *)(function->valueSuper))->mainCmdS[(arguments->index(0))->toIndex()])
-						);
+					    (((Executive *)(function->valueSuper))->mainCmdS[(arguments->index(0))->toIndex()]));
 				};
 
 				static TPointer<Variable> getExecutable(VariableFunction *function, Variable *this_, VariableArray *arguments) {
@@ -62,8 +60,7 @@ namespace Quantum {
 					executable << Shell::getFileName(((Executive *)(function->valueSuper))->mainCmdS[0]);
 
 					return VariableString::newVariable(
-							executable
-						);
+					    executable);
 				};
 
 				static TPointer<Variable> getPathExecutable(VariableFunction *function, Variable *this_, VariableArray *arguments) {
@@ -72,8 +69,7 @@ namespace Quantum {
 #endif
 
 					return VariableString::newVariable(
-							((Executive *)(function->valueSuper))->pathExecutable
-						);
+					    ((Executive *)(function->valueSuper))->pathExecutable);
 				};
 
 				void registerInternalExtension(Executive *executive) {
@@ -93,8 +89,7 @@ namespace Quantum {
 					executive->setExtensionPublic(extensionId, true);
 
 					executive->compileStringX(
-						"var Application={};"
-					);
+					    "var Application={};");
 
 					executive->setFunction4("Application.getCmdN", getCmdN, executive);
 					executive->setFunction4("Application.getCmdS(x)", getCmdS, executive);
@@ -103,7 +98,6 @@ namespace Quantum {
 
 					executive->compileStringX(extensionApplicationSource);
 				};
-
 
 			};
 		};
@@ -115,4 +109,3 @@ extern "C" QUANTUM_SCRIPT_EXTENSION_APPLICATION_EXPORT void quantumScriptExtensi
 	Quantum::Script::Extension::Application::initExecutive(executive, extensionId);
 };
 #endif
-

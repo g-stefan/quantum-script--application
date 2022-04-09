@@ -11,7 +11,7 @@
 #define QUANTUM_SCRIPT_EXTENSION_APPLICATION_LICENSE_HPP
 
 #ifndef QUANTUM_SCRIPT_EXTENSION_APPLICATION__EXPORT_HPP
-#include "quantum-script-extension-application--export.hpp"
+#	include "quantum-script-extension-application--export.hpp"
 #endif
 
 namespace Quantum {
