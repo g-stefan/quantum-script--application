@@ -1,0 +1,11 @@
+// Quantum Script Extension Application
+// Copyright (c) 2022 Grigore Stefan <g_stefan@yahoo.com>
+// MIT License (MIT) <http://opensource.org/licenses/MIT>
+// SPDX-FileCopyrightText: 2022 Grigore Stefan <g_stefan@yahoo.com>
+// SPDX-License-Identifier: MIT
+
+#include <XYO/QuantumScript.Extension/Application/Library.rh>
+#include <XYO/QuantumScript.Extension/Application/Copyright.rh>
+#include <XYO/QuantumScript.Extension/Application/Version.rh>
+
+XYO_APPLICATION_VERSION_INFO(XYO_QUANTUMSCRIPT_EXTENSION_APPLICATION,"quantum-script--application.dll","Quantum Script Extension Application")

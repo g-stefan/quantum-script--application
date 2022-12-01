@@ -6,10 +6,11 @@ Application.getCmdN();
 Application.getCmdS(index);
 Application.getExecutable();
 Application.getPathExecutable();
+Application.getFlagValue(argument,defaultValue);
+Application.getArgument(position,defaultValue);
 ```
 
 ## License
 
-Copyright (c) Grigore Stefan
-
+Copyright (c) 2022 Grigore Stefan
 Licensed under the [MIT](LICENSE) license.
