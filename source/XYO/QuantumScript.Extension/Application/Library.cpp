@@ -13,7 +13,7 @@
 namespace XYO::QuantumScript::Extension::Application {
 
 	static TPointer<Variable> getCmdN(VariableFunction *function, Variable *this_, VariableArray *arguments) {
-#ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
+#ifdef XYO_QUANTUMSCRIPT_DEBUG_RUNTIME
 		printf("- application-get-cmd-n\n");
 #endif
 
@@ -22,7 +22,7 @@ namespace XYO::QuantumScript::Extension::Application {
 	};
 
 	static TPointer<Variable> getCmdS(VariableFunction *function, Variable *this_, VariableArray *arguments) {
-#ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
+#ifdef XYO_QUANTUMSCRIPT_DEBUG_RUNTIME
 		printf("- application-get-cmd-s\n");
 #endif
 
@@ -31,7 +31,7 @@ namespace XYO::QuantumScript::Extension::Application {
 	};
 
 	static TPointer<Variable> getExecutable(VariableFunction *function, Variable *this_, VariableArray *arguments) {
-#ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
+#ifdef XYO_QUANTUMSCRIPT_DEBUG_RUNTIME
 		printf("- application-get-executable\n");
 #endif
 
@@ -44,7 +44,7 @@ namespace XYO::QuantumScript::Extension::Application {
 	};
 
 	static TPointer<Variable> getPathExecutable(VariableFunction *function, Variable *this_, VariableArray *arguments) {
-#ifdef QUANTUM_SCRIPT_DEBUG_RUNTIME
+#ifdef XYO_QUANTUMSCRIPT_DEBUG_RUNTIME
 		printf("- application-get-path-executable\n");
 #endif
 
