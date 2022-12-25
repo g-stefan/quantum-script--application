@@ -32,6 +32,19 @@ Application.getFlagValue=function(argument,defaultValue){
 	return defaultValue;
 };
 
+Application.hasFlag=function(argument){
+	var scan;
+	for(scan of Application.arguments){
+		if(scan == "--"+argument){
+			return true;
+		};
+		if(scan.indexOf("--"+argument+"=")>=0){
+			return true;
+		};
+	};
+	return false;
+};
+
 Application.getArgument=function(position,defaultValue){
 	var scan;
 	var index=0;

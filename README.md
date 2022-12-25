@@ -7,6 +7,7 @@ Application.getCmdS(index);
 Application.getExecutable();
 Application.getPathExecutable();
 Application.getFlagValue(argument,defaultValue);
+Application.hasFlag(argument);
 Application.getArgument(position,defaultValue);
 ```
 
