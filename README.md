@@ -13,5 +13,5 @@ Application.getArgument(position,defaultValue);
 
 ## License
 
-Copyright (c) 2022 Grigore Stefan
+Copyright (c) 2016-2023 Grigore Stefan
 Licensed under the [MIT](LICENSE) license.
