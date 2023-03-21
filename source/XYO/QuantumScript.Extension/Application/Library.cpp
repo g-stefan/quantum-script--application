@@ -59,7 +59,7 @@ namespace XYO::QuantumScript::Extension::Application {
 	void initExecutive(Executive *executive, void *extensionId) {
 
 		String info = "Application\r\n";
-		info << License::shortLicense();
+		info << License::shortLicense().c_str();
 
 		executive->setExtensionName(extensionId, "Application");
 		executive->setExtensionInfo(extensionId, info);
