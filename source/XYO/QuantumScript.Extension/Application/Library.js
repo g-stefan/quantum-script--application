@@ -17,16 +17,10 @@ for (x = 1, k = 0; x < n; ++x, ++k) {
 
 Application.getFlagValue = function(argument, defaultValue) {
 	var scan;
+	var prefix = "--" + argument + "=";
 	for (scan of Application.arguments) {
-		if (scan.indexOf("--") == 0) {
-			if (scan.indexOf("=") >= 0) {
-				var info = scan.split("=");
-				if (info.length > 1) {
-					if (info[0].substring(2) == argument) {
-						return info[1];
-					};
-				};
-			};
+		if (scan.indexOf(prefix) == 0) {
+			return scan.substring(prefix.length);
 		};
 	};
 	return defaultValue;

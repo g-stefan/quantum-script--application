@@ -26,8 +26,22 @@ namespace XYO::QuantumScript::Extension::Application {
 		printf("- application-get-cmd-s\n");
 #endif
 
-		return VariableString::newVariable(
-		    (((Executive *)(function->valueSuper))->mainCmdS[(arguments->index(0))->toIndex()]));
+		Executive *executive = (Executive *)(function->valueSuper);
+		size_t index = (arguments->index(0))->toIndex();
+		if (executive->mainCmdS == nullptr) {
+			return Context::getValueUndefined();
+		};
+		if (executive->mainCmdN <= 0) {
+			return Context::getValueUndefined();
+		};
+		if (index >= (size_t)(executive->mainCmdN)) {
+			return Context::getValueUndefined();
+		};
+		if (executive->mainCmdS[index] == nullptr) {
+			return Context::getValueUndefined();
+		};
+
+		return VariableString::newVariable(executive->mainCmdS[index]);
 	};
 
 	static TPointer<Variable> getExecutable(VariableFunction *function, Variable *this_, VariableArray *arguments) {
@@ -35,9 +49,19 @@ namespace XYO::QuantumScript::Extension::Application {
 		printf("- application-get-executable\n");
 #endif
 
-		String executable = ((Executive *)(function->valueSuper))->pathExecutable;
+		Executive *executive = (Executive *)(function->valueSuper);
+		String executable = executive->pathExecutable;
+		if (executive->mainCmdS == nullptr) {
+			return VariableString::newVariable(executable);
+		};
+		if (executive->mainCmdN <= 0) {
+			return VariableString::newVariable(executable);
+		};
+		if (executive->mainCmdS[0] == nullptr) {
+			return VariableString::newVariable(executable);
+		};
 		executable << Shell::pathSeparator;
-		executable << Shell::getFileName(((Executive *)(function->valueSuper))->mainCmdS[0]);
+		executable << Shell::getFileName(executive->mainCmdS[0]);
 
 		return VariableString::newVariable(
 		    executable);
